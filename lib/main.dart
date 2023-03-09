@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:dragon_academy/lists.dart';
-import 'package:icon_forest/icon_forest.dart';
+// import 'package:icon_forest/icon_forest.dart';
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:mdi/mdi.dart';
+// import 'package:mdi/mdi.dart';
 
 void main() {
   runApp(const MyApp());
@@ -76,7 +76,11 @@ class _MyHomePageState extends State<MyHomePage> {
             onPressed: () {
               print(listOfKeys[index].name);
               setState(() {
-                consoleOutputList.add(listOfKeys[index].name);
+                if (listOfKeys[index].name == 'Del') {
+                  consoleOutputList.removeLast();
+                } else {
+                  consoleOutputList.add(listOfKeys[index].name);
+                }
                 consoleOutputString = consoleOutputList.join(' ');
                 print('new consoleOutputString is $consoleOutputString');
               });
