@@ -59,17 +59,17 @@ List<ButtonInfo> rowCommButtons = [
 ];
 
 List<ButtonInfo> rowShapesButtons = [
-  ButtonInfo('Circle', FontAwesomeIcons.circle, Colors.brown.shade100, 'tbd'),
-  ButtonInfo('Square', FontAwesomeIcons.square, Colors.brown.shade100, 'tbd'),
-  ButtonInfo('Triangle', Icons.change_history, Colors.brown.shade100, 'tbd'),
-  ButtonInfo('Rectangle', Icons.rectangle, Colors.brown.shade100, 'tbd'),
-  ButtonInfo('Diamond', Icons.diamond, Colors.brown.shade100, 'tbd'),
+  ButtonInfo('Circle', Mdi.circle, Colors.brown.shade100, 'tbd'),
+  ButtonInfo('Square', Mdi.square, Colors.brown.shade100, 'tbd'),
+  ButtonInfo('Triangle', Mdi.triangle, Colors.brown.shade100, 'tbd'),
+  ButtonInfo('Rectangle', Mdi.rectangle, Colors.brown.shade100, 'tbd'),
+  ButtonInfo('Diamond', Mdi.rhombus, Colors.brown.shade100, 'tbd'),
   ButtonInfo('Oval', Icons.circle, Colors.brown.shade100, 'tbd'),
   ButtonInfo('Star', Icons.star_sharp, Colors.brown.shade100, 'tbd'),
-  ButtonInfo('Heart', Icons.favorite, Colors.brown.shade100, 'tbd'),
-  ButtonInfo('Cube', FontAwesomeIcons.cube, Colors.brown.shade100, 'tbd'),
-  ButtonInfo('Sphere', Icons.circle, Colors.brown.shade100, 'tbd'),
-  ButtonInfo('Hexagon', Icons.hexagon, Colors.brown.shade100, 'tbd'),
+  ButtonInfo('Heart', Mdi.heart, Colors.brown.shade100, 'tbd'),
+  ButtonInfo('Cube', Mdi.cubeOutline, Colors.brown.shade100, 'tbd'),
+  ButtonInfo('Sphere', Mdi.circle, Colors.brown.shade100, 'tbd'),
+  ButtonInfo('Hexagon', Mdi.hexagon, Colors.brown.shade100, 'tbd'),
 ];
 
 List<ButtonInfo> rowNumberButtons = [
@@ -127,7 +127,7 @@ List<ButtonInfo> rowMidKeyboardButtons = [
   ButtonInfo('J', Mdi.alphaJCircleOutline, Colors.brown.shade100, 'tbd'),
   ButtonInfo('K', Mdi.alphaKCircleOutline, Colors.brown.shade100, 'tbd'),
   ButtonInfo('L', Mdi.alphaLCircleOutline, Colors.brown.shade100, 'tbd'),
-  ButtonInfo('Enter', Icons.hexagon, Colors.brown.shade100, 'tbd'),
+  ButtonInfo('Enter', Mdi.keyboardReturn, Colors.brown.shade100, 'tbd'),
 ];
 
 List<ButtonInfo> rowLowKeyboardButtons = [
@@ -145,7 +145,7 @@ List<ButtonInfo> rowLowKeyboardButtons = [
 ];
 
 List<ButtonInfo> rowBottomKeyboardButtons = [
-  ButtonInfo('up', FontAwesomeIcons.circle, Colors.brown.shade100, 'tbd'),
+  ButtonInfo('up', Mdi.menuUp, Colors.brown.shade100, 'tbd'),
   ButtonInfo('', null, Colors.brown.shade100, 'tbd'),
   ButtonInfo('', null, Colors.brown.shade100, 'tbd'),
   ButtonInfo('Space', Icons.rectangle, Colors.brown.shade100, 'tbd'),
@@ -161,12 +161,12 @@ List<ButtonInfo> rowBottomKeyboardButtons = [
 List<ButtonInfo> rowActivitiesButtons = [
   ButtonInfo('', null, Colors.brown.shade100, 'tbd'),
   ButtonInfo('', null, Colors.brown.shade100, 'tbd'),
-  ButtonInfo('Bathroom', Icons.change_history, Colors.brown.shade100, 'tbd'),
-  ButtonInfo('Pencil', Icons.rectangle, Colors.brown.shade100, 'tbd'),
-  ButtonInfo('Scissors', Icons.diamond, Colors.brown.shade100, 'tbd'),
+  ButtonInfo('Bathroom', Mdi.toilet, Colors.brown.shade100, 'tbd'),
+  ButtonInfo('Pencil', Mdi.pencil, Colors.brown.shade100, 'tbd'),
+  ButtonInfo('Scissors', Mdi.scissorsCutting, Colors.brown.shade100, 'tbd'),
   ButtonInfo('Glue', Icons.circle, Colors.brown.shade100, 'tbd'),
-  ButtonInfo('Crayon', Icons.star_sharp, Colors.brown.shade100, 'tbd'),
-  ButtonInfo('Paper', Icons.favorite, Colors.brown.shade100, 'tbd'),
+  ButtonInfo('Crayon', Mdi.leadPencil, Colors.brown.shade100, 'tbd'),
+  ButtonInfo('Paper', Mdi.noteTextOutline, Colors.brown.shade100, 'tbd'),
   ButtonInfo('', null, Colors.brown.shade100, 'tbd'),
   ButtonInfo('', null, Colors.brown.shade100, 'tbd'),
   ButtonInfo('', null, Colors.brown.shade100, 'tbd'),

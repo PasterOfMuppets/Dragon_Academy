@@ -56,6 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
           color: listOfKeys[index].color,
           child: TextButton(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Center(
                   child: Icon(
@@ -77,7 +78,9 @@ class _MyHomePageState extends State<MyHomePage> {
               print(listOfKeys[index].name);
               setState(() {
                 if (listOfKeys[index].name == 'Del') {
-                  consoleOutputList.removeLast();
+                  if (consoleOutputList.length > 0) {
+                    consoleOutputList.removeLast();
+                  }
                 } else {
                   consoleOutputList.add(listOfKeys[index].name);
                 }
@@ -97,33 +100,35 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Container(
-              width: double.infinity,
-              height: 70,
-              margin: EdgeInsets.all(2),
-              color: Colors.grey,
-              child: Text(
-                consoleOutputString,
-                style: TextStyle(color: Colors.white, fontSize: 24),
+      body: SafeArea(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Container(
+                width: double.infinity,
+                height: 70,
+                margin: EdgeInsets.all(2),
+                color: Colors.grey,
+                child: Text(
+                  consoleOutputString,
+                  style: TextStyle(color: Colors.white, fontSize: 24),
+                ),
               ),
-            ),
-            blankRow(),
-            blankRow(),
-            rowOfKeys(rowFolderButtons),
-            rowOfKeys(rowActivitiesButtons),
-            rowOfKeys(rowCommButtons),
-            rowOfKeys(rowNumberButtons),
-            rowOfKeys(rowColorsButtons),
-            rowOfKeys(rowShapesButtons),
-            rowOfKeys(rowTopKeyboardButtons),
-            rowOfKeys(rowMidKeyboardButtons),
-            rowOfKeys(rowLowKeyboardButtons),
-            rowOfKeys(rowBottomKeyboardButtons),
-          ],
+              blankRow(),
+              blankRow(),
+              rowOfKeys(rowFolderButtons),
+              rowOfKeys(rowActivitiesButtons),
+              rowOfKeys(rowCommButtons),
+              rowOfKeys(rowNumberButtons),
+              rowOfKeys(rowColorsButtons),
+              rowOfKeys(rowShapesButtons),
+              rowOfKeys(rowTopKeyboardButtons),
+              rowOfKeys(rowMidKeyboardButtons),
+              rowOfKeys(rowLowKeyboardButtons),
+              rowOfKeys(rowBottomKeyboardButtons),
+            ],
+          ),
         ),
       ),
     );
