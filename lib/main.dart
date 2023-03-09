@@ -35,6 +35,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   String consoleOutputString = '';
+  List<String> consoleOutputList = [];
 
   Container blankRow() {
     return Container(
@@ -67,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: AutoSizeText(
                     listOfKeys[index].name,
                     maxLines: 1,
-                    style: TextStyle(color: Colors.white, fontSize: 5),
+                    style: TextStyle(color: Colors.black, fontSize: 5),
                   ),
                 ),
               ],
@@ -75,8 +76,8 @@ class _MyHomePageState extends State<MyHomePage> {
             onPressed: () {
               print(listOfKeys[index].name);
               setState(() {
-                consoleOutputString =
-                    consoleOutputString + ' ' + listOfKeys[index].name;
+                consoleOutputList.add(listOfKeys[index].name);
+                consoleOutputString = consoleOutputList.join(' ');
                 print('new consoleOutputString is $consoleOutputString');
               });
             },
