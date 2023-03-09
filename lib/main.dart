@@ -78,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
               print(listOfKeys[index].name);
               setState(() {
                 if (listOfKeys[index].name == 'Del') {
-                  if (consoleOutputList.length > 0) {
+                  if (consoleOutputList.isNotEmpty) {
                     consoleOutputList.removeLast();
                   }
                 } else {
