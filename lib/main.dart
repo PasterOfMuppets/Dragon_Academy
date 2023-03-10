@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 // import 'package:icon_forest/icon_forest.dart';
 // import 'package:mdi/mdi.dart';
-import 'communicatorPage.dart';
+import 'communicator_page.dart';
 
 void main() {
   runApp(const MyApp());
