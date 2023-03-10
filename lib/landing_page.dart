@@ -20,7 +20,7 @@ class _LandingPageState extends State<LandingPage> {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             gradient: RadialGradient(colors: [
               Colors.grey,
               Colors.black,
@@ -39,18 +39,19 @@ class _LandingPageState extends State<LandingPage> {
                     mainAxisSpacing: 35,
                     crossAxisSpacing: 35,
                     children: [
-                      ModuleCard(
+                      const ModuleCard(
                           moduleName: 'Communicator',
                           moduleImage: Mdi.accountVoice),
-                      ModuleCard(
+                      const ModuleCard(
                           moduleImage: Mdi.weightLifter,
                           moduleName: 'Exercise'),
-                      ModuleCard(
+                      const ModuleCard(
                           moduleImage: Mdi.chairSchool, moduleName: 'Classes'),
-                      ModuleCard(
+                      const ModuleCard(
                           moduleImage: Mdi.toothbrush,
                           moduleName: 'Personal Care'),
-                      ModuleCard(moduleName: 'Games', moduleImage: Mdi.gamepad),
+                      const ModuleCard(
+                          moduleName: 'Games', moduleImage: Mdi.gamepad),
                     ],
                   ),
                 )
@@ -64,7 +65,7 @@ class _LandingPageState extends State<LandingPage> {
 }
 
 class ModuleCard extends StatelessWidget {
-  ModuleCard({required this.moduleImage, required this.moduleName});
+  const ModuleCard({required this.moduleImage, required this.moduleName});
 
   final String moduleName;
   final IconData moduleImage;
@@ -77,23 +78,23 @@ class ModuleCard extends StatelessWidget {
       },
       child: Container(
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(20)),
+          borderRadius: const BorderRadius.all(Radius.circular(20)),
           color: Colors.blue[200],
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            SizedBox(height: 10.0),
+            const SizedBox(height: 10.0),
             Icon(
               moduleImage,
               size: 100.0,
             ),
-            SizedBox(
+            const SizedBox(
               height: 15.0,
             ),
             Text(
-              '$moduleName',
-              style: TextStyle(
+              moduleName,
+              style: const TextStyle(
                 fontSize: 40.0,
                 color: Color(0xFF8D8E98),
               ),

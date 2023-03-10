@@ -20,7 +20,7 @@ class _CommunicatorPageState extends State<CommunicatorPage> {
   Container blankRow() {
     return Container(
       height: 70,
-      margin: EdgeInsets.all(2),
+      margin: const EdgeInsets.all(2),
       color: Colors.white24,
     );
   }
@@ -32,9 +32,14 @@ class _CommunicatorPageState extends State<CommunicatorPage> {
         return Container(
           width: 70,
           height: 70,
-          margin: EdgeInsets.all(2),
+          margin: const EdgeInsets.all(2),
           color: listOfKeys[index].color,
-          child: TextButton(
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.greenAccent,
+              // shadowColor: Colors.red,
+              // elevation: 200,
+            ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -49,7 +54,7 @@ class _CommunicatorPageState extends State<CommunicatorPage> {
                   child: AutoSizeText(
                     listOfKeys[index].name,
                     maxLines: 1,
-                    style: TextStyle(color: Colors.black, fontSize: 5),
+                    style: const TextStyle(color: Colors.black, fontSize: 5),
                   ),
                 ),
               ],
@@ -88,15 +93,16 @@ class _CommunicatorPageState extends State<CommunicatorPage> {
               Container(
                 width: double.infinity,
                 height: 70,
-                margin: EdgeInsets.all(2),
+                margin: const EdgeInsets.all(2),
                 color: Colors.grey,
                 child: Text(
                   consoleOutputString,
-                  style: TextStyle(color: Colors.white, fontSize: 24),
+                  style: const TextStyle(color: Colors.white, fontSize: 24),
                 ),
               ),
-              blankRow(),
-              blankRow(),
+              rowOfKeys(rowFolderButtons),
+              rowOfKeys(rowFolderButtons),
+              rowOfKeys(rowFolderButtons),
               rowOfKeys(rowFolderButtons),
               rowOfKeys(rowActivitiesButtons),
               rowOfKeys(rowCommButtons),
