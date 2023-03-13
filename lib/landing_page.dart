@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mdi/mdi.dart';
+import 'communicator_page.dart';
 
 void main() => runApp(
       const MaterialApp(
@@ -38,20 +39,19 @@ class _LandingPageState extends State<LandingPage> {
                     crossAxisCount: 2,
                     mainAxisSpacing: 35,
                     crossAxisSpacing: 35,
-                    children: [
-                      const ModuleCard(
+                    children: const [
+                      ModuleCard(
                           moduleName: 'Communicator',
                           moduleImage: Mdi.accountVoice),
-                      const ModuleCard(
+                      ModuleCard(
                           moduleImage: Mdi.weightLifter,
                           moduleName: 'Exercise'),
-                      const ModuleCard(
+                      ModuleCard(
                           moduleImage: Mdi.chairSchool, moduleName: 'Classes'),
-                      const ModuleCard(
+                      ModuleCard(
                           moduleImage: Mdi.toothbrush,
                           moduleName: 'Personal Care'),
-                      const ModuleCard(
-                          moduleName: 'Games', moduleImage: Mdi.gamepad),
+                      ModuleCard(moduleName: 'Games', moduleImage: Mdi.gamepad),
                     ],
                   ),
                 )
@@ -74,6 +74,10 @@ class ModuleCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => CommunicatorPage()),
+        );
         print('Somebody pushed the $moduleName button!');
       },
       child: Container(

@@ -5,9 +5,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 // import 'package:mdi/mdi.dart';
 
 class CommunicatorPage extends StatefulWidget {
-  const CommunicatorPage({super.key, required this.title});
-
-  final String title;
+  const CommunicatorPage({super.key});
 
   @override
   State<CommunicatorPage> createState() => _CommunicatorPageState();
@@ -34,12 +32,8 @@ class _CommunicatorPageState extends State<CommunicatorPage> {
           height: 70,
           margin: const EdgeInsets.all(2),
           color: listOfKeys[index].color,
-          child: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.greenAccent,
-              // shadowColor: Colors.red,
-              // elevation: 200,
-            ),
+          child: TextButton(
+            style: TextButton.styleFrom(),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -83,7 +77,7 @@ class _CommunicatorPageState extends State<CommunicatorPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text('Dragon Academy'),
       ),
       body: SafeArea(
         child: Center(
@@ -100,9 +94,9 @@ class _CommunicatorPageState extends State<CommunicatorPage> {
                   style: const TextStyle(color: Colors.white, fontSize: 24),
                 ),
               ),
-              rowOfKeys(rowFolderButtons),
-              rowOfKeys(rowFolderButtons),
-              rowOfKeys(rowFolderButtons),
+              blankRow(),
+              blankRow(),
+              blankRow(),
               rowOfKeys(rowFolderButtons),
               rowOfKeys(rowActivitiesButtons),
               rowOfKeys(rowCommButtons),
