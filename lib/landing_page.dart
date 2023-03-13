@@ -2,12 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:mdi/mdi.dart';
 import 'communicator_page.dart';
 
-void main() => runApp(
-      const MaterialApp(
-        home: LandingPage(),
-      ),
-    );
-
 class LandingPage extends StatefulWidget {
   const LandingPage({Key? key}) : super(key: key);
 
